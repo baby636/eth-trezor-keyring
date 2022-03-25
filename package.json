@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint . --ext .js",
-    "lint:fix": "eslint --fix . --ext .js"
+    "lint:fix": "eslint --fix . --ext .js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,8 @@
     "ethereumjs-util": "^5.1.5",
     "events": "^2.0.0",
     "hdkey": "0.8.0",
-    "trezor-connect": "^7.0.1"
+    "trezor-connect": "^7.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@metamask/eslint-config": "^3.0.0",
@@ -45,5 +48,6 @@
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-mocha": "^6.2.2",
     "mocha": "^5.0.4"
-  }
+  },
+  "snyk": true
 }
